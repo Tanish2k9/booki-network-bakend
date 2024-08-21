@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: book-sharing-system
+  datasource:
+    url: jdbc:mysql://localhost:3306/books_db?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  properties:
+    hibernate:
+      format_sql: true
+  show-sql: true
+  security:
+    user:
+      name: root
+      password: root
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+
+application:
+  security:
+    jwt:
+      secret-key: tanishtanishtanishtanishtanishtanishtanishtanihs
+      expiration: 86400
+  file:
+    uploads:
+      photos-output-path: ./uploads
